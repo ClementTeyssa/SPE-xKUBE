@@ -8,8 +8,8 @@ spec:
   selector:
     app: nginx
     tier: backend
-#   ports:
-#   - protocol: TCP
-#     port: 80
+  ports:
+  - protocol: TCP
+    port: 80
 #   externalIPs:
 #   - your_public_ip    
