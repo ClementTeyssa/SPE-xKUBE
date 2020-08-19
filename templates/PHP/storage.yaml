@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: code
 spec:
-  storageClassName: do-block-storage
+  storageClassName: GCEPersistentDisk
   capacity:
     storage: 1Gi
   accessModes:
