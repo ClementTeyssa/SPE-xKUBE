@@ -1,13 +1,12 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
   name: code
 spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
   storageClassName: do-block-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
   hostPath:
-          path: PHP
+    path: "./PHP"
