@@ -3,37 +3,26 @@ kind: Deployment
 metadata:
   name: php
   labels:
-    tier: backend
+    app: php
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: php
-      tier: backend
   template:
     metadata:
       labels:
         app: php
-        tier: backend
     spec:
       volumes:
       - name: code
         persistentVolumeClaim:
           claimName: code
+        hostPath:
+          path: ../../PHP
       containers:
       - name: php
         image: php:7-fpm
         volumeMounts:
         - name: code
           mountPath: /
-      initContainers:
-      - name: install
-        image: busybox
-        volumeMounts:
-        - name: code
-          mountPath: /code
-        command:
-        - wget
-        - "-O"
-        - "/index.php"
-        - https://raw.githubusercontent.com/do-community/php-kubernetes/master/index.php

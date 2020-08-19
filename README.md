@@ -1,6 +1,6 @@
 # SPE-xKUBE
 
-![schema-solution](spe-1.png)
+![schema-solution](images/spe-1.png)
 
 Pour réaliser ce projet, vous aurez besoin de constituer plusieurs composants :
 
@@ -23,12 +23,15 @@ Barême ( groupe de deux autorisés )
 
 - Cluster PHP-FPM ( 2 points )
 - Cluster serveur web Nginx ( 2 points )
+    - Cluster Nginx remplacé par le reverse proxy Traefik, qui se charge de rediriger les requêtes en backend
 - Connexion entre vos pools FPM et Nginx ( 2 points )
 - Cluster Vitess ( 2 points )
 - Connexion entre Vitess et Wordpress ( 1 points )
 - Secret et configMap ( 1 points )
 - Ingress solution ( 2 points )
+    - Ingress via Traefik
 - Ingress sur votre application ( 1 points )
+    - Ingress via Traefik
 - https sur votre application ( 1 points )
 - Implémenter memcached avec mcrouter pour gérer les sessions. ( 3 points )
 - Helm Chart par vos soins( 3 points )
