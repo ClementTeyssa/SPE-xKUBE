@@ -9,3 +9,5 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: do-block-storage
+  hostPath:
+          path: PHP

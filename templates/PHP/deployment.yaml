@@ -18,8 +18,6 @@ spec:
       - name: code
         persistentVolumeClaim:
           claimName: code
-        hostPath:
-          path: PHP
       containers:
       - name: php
         image: php:7-fpm
