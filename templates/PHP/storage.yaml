@@ -8,5 +8,5 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  hostPath:
-    path: "./PHP"
+    hostPath:
+      path: "./PHP"
