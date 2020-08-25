@@ -3,7 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: code
 spec:
-  replicas: 3
   accessModes:
     - ReadWriteOnce
   resources:
