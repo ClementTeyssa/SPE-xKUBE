@@ -15,5 +15,8 @@ spec:
         app: php
     spec:
       containers:
-      - name: php
-        image: php:7-fpm
+        - name: php
+          image: php:7-fpm
+          ports:
+            - name: web
+              containerPort: 9000

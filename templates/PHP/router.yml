@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - web
   routes:
-  - match: Host(`292621-xkube.tk`)
+  - match: Host(`web.292621-xkube.tk`)
     kind: Rule
     services:
     - name: php
@@ -22,7 +22,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-  - match: Host(`292621-xkube.tk`)
+  - match: Host(`web.292621-xkube.tk`)
     kind: Rule
     services:
     - name: php
