@@ -5,7 +5,7 @@ metadata:
   labels:
     app: php
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: php
@@ -14,10 +14,6 @@ spec:
       labels:
         app: php
     spec:
-      volumes:
-      - name: code
-        persistentVolumeClaim:
-          claimName: code
       containers:
       - name: php
         image: php:7-fpm

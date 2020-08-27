@@ -11,7 +11,7 @@ spec:
     kind: Rule
     services:
     - name: php
-      port: 8080
+      port: 9000
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -26,6 +26,6 @@ spec:
     kind: Rule
     services:
     - name: php
-      port: 8080
+      port: 9000
   tls:
     certResolver: myresolver
