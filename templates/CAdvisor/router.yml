@@ -1,0 +1,31 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: cadvisor
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`cadvisor.292621-xkube.tk`)
+    kind: Rule
+    services:
+    - name: cadvisor
+      port: 8080
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: cadvisor-tls
+  namespace: default
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`cadvisor.292621-xkube.tk`)
+    kind: Rule
+    services:
+    - name: cadvisor
+      port: 8080
+  tls:
+    certResolver: myresolver

@@ -22,22 +22,26 @@ Accéder à votre application depuis l’extérieur :
 Barême ( groupe de deux autorisés )
 
 - Cluster PHP-FPM ( 2 points )
+    - ![pods-list](images/pods.png)
 - Cluster serveur web Nginx ( 2 points )
     - Cluster Nginx remplacé par le reverse proxy Traefik, qui se charge de rediriger les requêtes en backend
+    - ![pods-list](images/pods.png)
 - Connexion entre vos pools FPM et Nginx ( 2 points )
-- Cluster Vitess ( 2 points )
-- Connexion entre Vitess et Wordpress ( 1 points )
-- Secret et configMap ( 1 points )
+    - Les pods FPM ont reliés à Traefik via un router
 - Ingress solution ( 2 points )
     - Ingress via Traefik
 - Ingress sur votre application ( 1 points )
     - Ingress via Traefik
 - https sur votre application ( 1 points )
-- Implémenter memcached avec mcrouter pour gérer les sessions. ( 3 points )
+    - HTTPS géré via Traefik
+    - ![HTTPS-proof](images/HTTPS.png)
 - Helm Chart par vos soins( 3 points )
+    - Helm fonctionnel (sans la gestion des values)
 
 Bonus :
 
 - Logging / Monitoring ( 2 points )
-- CI / CD ( 2 points )
-- Varnish pour mettre en cache le front ( 2 points )
+    - 
+
+Le projet a été réalisé sur GoogleCloudPlatform, avec un DNS m'appartenant. Il ne sera plus accessible en ligne après le rendu du projet pour éviter les sur-coûts liés au Cloud.
+![cluster-solution](images/cluster.png)
