@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php
+  name: cadvisor
   labels:
-    app: php
+    app: cadvisor
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: php
+      app: cadvisor
   template:
     metadata:
       labels:
-        app: php
+        app: cadvisor
     spec:
       containers:
         - name: cadvisor
