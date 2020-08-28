@@ -41,7 +41,9 @@ Barême ( groupe de deux autorisés )
 Bonus :
 
 - Logging / Monitoring ( 2 points )
-    - 
+    - Cadvisor sert à monitorer l'utilisation des ressources sur les pods
+    - ![pods-list](images/pods.png)
+    - <img src="images/cadvisor.png" width="600">
 
 Le projet a été réalisé sur GoogleCloudPlatform, avec un DNS m'appartenant. Il ne sera plus accessible en ligne après le rendu du projet pour éviter les sur-coûts liés au Cloud.
 ![cluster-solution](images/cluster.png)
