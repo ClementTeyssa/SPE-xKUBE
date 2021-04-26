@@ -1,4 +1,4 @@
-# SPE-xKUBE
+# Project release for SPE-xKUBE using Kubernetes and GCP
 
 ![schema-solution](images/spe-1.png)
 
